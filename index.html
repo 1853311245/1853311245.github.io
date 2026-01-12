@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的资源导航</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 基础样式 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .subtitle { font-size: 1.1rem; opacity: 0.9; }
+
+        /* 资源列表样式 */
+        .resource-section { margin-bottom: 40px; }
+        .section-title {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
+            margin: 25px 0 15px 0;
+        }
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .resource-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            border: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .resource-card h3 {
+            color: #2980b9;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        .resource-card p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        .link-btn {
+            display: inline-block;
+            background-color: #27ae60;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .link-btn:hover {
+            background-color: #219653;
+        }
+        .link-btn i { margin-right: 5px; }
+
+        /* 付费说明区样式 */
+        .payment-section {
+            background: #fff8e1;
+            border-left: 5px solid #ffb300;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+        .payment-section h2 { color: #e65100; margin-bottom: 15px; }
+        .steps { margin-left: 20px; margin-top: 15px; }
+        .steps li { margin-bottom: 10px; }
+        .qr-placeholder {
+            width: 200px;
+            height: 200px;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #777;
+        }
+
+        /* 页脚 */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1><i class="fas fa-compass"></i> 我的资源宝库</h1>
+        <p class="subtitle">精选实用工具与学习资料，持续更新</p>
+    </header>
+
+    <!-- =============== 资源列表区 =============== -->
+    <!-- 你可以修改下面的所有内容 -->
+    <section class="resource-section">
+        <h2 class="section-title"><i class="fas fa-th-list"></i> 资源分类</h2>
+
+        <div class="resource-grid">
+            <!-- 资源卡片 1 -->
+            <div class="resource-card">
+                <h3>Office 2024 专业版</h3>
+                <p>包含最新版Word、Excel、PowerPoint，附带激活工具与详细安装教程。</p>
+                <a href="https://pan.baidu.com/s/你的百度网盘链接" target="_blank" class="link-btn">
+                    <i class="fas fa-download"></i> 免费获取
+                </a>
+            </div>
+
+            <!-- 资源卡片 2 -->
+            <div class="resource-card">
+                <h3>Photoshop 大师课</h3>
+                <p>从零基础到精通的完整视频教程，包含案例素材与插件包。</p>
+                <a href="https://www.aliyundrive.com/s/你的阿里云盘链接" target="_blank" class="link-btn">
+                    <i class="fas fa-download"></i> 免费获取
+                </a>
+            </div>
+
+            <!-- 资源卡片 3 -->
+            <div class="resource-card">
+                <h3>Python 编程全集</h3>
+                <p>包含电子书、实战项目源码、环境搭建指南，适合初学者。</p>
+                <a href="https://你的其他网盘链接" target="_blank" class="link-btn">
+                    <i class="fas fa-download"></i> 免费获取
+                </a>
+            </div>
+
+            <!-- 你可以复制上面的卡片结构，继续添加更多资源 -->
+        </div>
+    </section>
+    <!-- =============== 资源列表区结束 =============== -->
+
+    <!-- =============== 手动付费说明区 =============== -->
+    <section class="payment-section">
+        <h2><i class="fas fa-shopping-cart"></i> 付费资源获取流程</h2>
+        <p>以下精品资源需要小额赞助以支持持续更新。请严格按照以下流程操作：</p>
+        <ol class="steps">
+            <li><strong>选择资源</strong>：确定你想要购买的资源名称。</li>
+            <li><strong>扫码支付</strong>：使用支付宝或微信扫描下方二维码，支付对应金额（如9.9元）。</li>
+            <li><strong>联系客服</strong>：支付成功后，<strong>务必截图</strong>，并添加客服QQ/微信（在二维码下方），发送截图和资源名称。</li>
+            <li><strong>获取链接</strong>：客服核实后，将立即通过私聊发送资源的专属下载链接与密码。</li>
+        </ol>
+        <p style="color: #d35400; margin-top: 15px;"><i class="fas fa-exclamation-circle"></i> <strong>重要</strong>：请勿在支付备注中填写任何信息，支付后必须主动联系客服才能发货！</p>
+
+        <!-- 收款码区域：你需要将图片上传并替换这里的src地址 -->
+        <div class="qr-placeholder">
+            【请在此处放置你的收款码】
+        </div>
+        <p style="text-align: center; font-weight: bold;">客服联系方式：QQ 123456789 | 微信 your-wechat-id</p>
+    </section>
+    <!-- =============== 付费说明区结束 =============== -->
+
+    <footer>
+        <p>© 2024 我的资源站. 本页面仅为资源索引，所有资源版权归原作者所有。</p>
+        <p>最后更新于：<span id="updateDate"></span></p>
+    </footer>
+
+    <script>
+        // 自动更新页脚日期
+        document.getElementById('updateDate').textContent = new Date().toLocaleDateString('zh-CN');
+    </script>
+</body>
+</html>
